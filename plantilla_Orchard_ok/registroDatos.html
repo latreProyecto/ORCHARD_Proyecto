@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Registration</title>
+
+  <script src='js/jquery.min.js' type='text/javascript'></script>
+  
+  <!-- RS -->
+  <link href="cssRS/style_login.css" rel='stylesheet' type='text/css' />
+  <link href='cssRS/family=Oxygen-400-300-700.css' rel='stylesheet' type='text/css'>
+  <!-- FIN RS -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href='cssRS/bootstrap.min.css' rel='stylesheet' type='text/css'>
+
+
+<script type="text/javascript">
+	
+function	mostrarRegistro(opcion) {
+	 var op = opcion.value;
+	 console.log('tu opcion es:'+op)
+
+	if(op == 'Productor'){
+
+		 	$('#registroProductor').css('display', 'block')
+		 	$('#registroConsumidor').css('display', 'none')
+
+		// 	console.log('coge id produ');
+		}else if(op == 'Consumidor'){
+
+			$('#registroProductor').css('display', 'none')
+		 	$('#registroConsumidor').css('display', 'block')
+
+		// 	console.log('coge id consu');
+		 }
+}
+		
+
+
+</script>
+
+</head>
+
+
+
+<body>
+  <div class='container'>
+    <div class='panel panel-primary dialog-panel'>
+      <div class='panel-heading'>
+        <h3 class="tituloReg">Registro</h3>
+      </div>
+
+      <div class='panel-body'>
+        <br>
+        <form class='form-horizontal' role='form'>
+          <!--  -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_accomodation'>¿Qué eres?</label>
+            <div class='col-md-2'>
+              <select class='form-control' id='id_accomodation' onChange="mostrarRegistro(this)">
+                <option id="produ" >Productor</option>
+                <option id="consu" >Consumidor</option>
+              </select>
+             </div>
+          </div>
+          <br>
+          <hr style="color='333';" />
+          
+          <div id="prueba"></div>
+
+          <!-- ////////////////////////////////////// -->
+          <!-- REGISTRO PRODUCTOR -->
+          <!-- ////////////////////////////////////// -->
+          <div id="registroProductor" style='display:block'>
+          <h2 class="tituloReg">Registro Productor</h2><br>
+
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_equipment'>¿Qué ofreces?</label>
+            <div class='col-md-8'>
+
+              <div class='col-md-9'>
+                <div class='form-group internal'>
+                  <label class='control-label col-md-3' for='id_slide'>Agricultura</label>
+                  <div class='make-switch' data-off-label='NO' data-on-label='YES' id='id_slide_switch'>
+                    <input id='id_slide' type='checkbox' value='chk_hydro'>
+                  </div>
+                </div>
+              </div>
+
+              <div class='col-md-9'>
+                <div class='form-group internal'>
+                  <label class='control-label col-md-3' for='id_slide'>Ganaderia</label>
+                  <div class='make-switch' data-off-label='NO' data-on-label='YES' id='id_slide_switch'>
+                    <input id='id_slide' type='checkbox' value='chk_hydro'>
+                  </div>
+                </div>
+              </div>
+
+              <div class='col-md-9'>
+                <div class='form-group internal'>
+                  <label class='control-label col-md-3' for='id_slide'>Artesania</label>
+                  <div class='make-switch' data-off-label='NO' data-on-label='YES' id='id_slide_switch'>
+                    <input id='id_slide' type='checkbox' value='chk_hydro'>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--  -->
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_accomodation'>¿Qué identidad?</label>
+            <div class='col-md-2'>
+              <select class='form-control' id='id_accomodation'>
+                <option>Cooperativa</option>
+                <option>Productor Local</option>
+                <option>Autonomo</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Datos productor -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Nombre</label>
+            <div class='col-md-8'>
+              <div class='col-md-2'>
+                <div class='form-group internal'>
+                  <select class='form-control' id='id_title'>
+                    <option>Mr</option>
+                    <option>Ms</option>
+                    <option>Mrs</option>
+                    <option>Miss</option>
+                  </select>
+                </div>
+              </div>
+              <div class='col-md-3 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_first_name' placeholder='Nombre' type='text'>
+                </div>
+              </div>
+              <div class='col-md-3 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_last_name' placeholder='Apellido' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- pais -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>País</label>
+            <div class='col-md-8'>
+              
+              <div class='col-md-3'>
+                <div class='form-group internal input-group'>
+                    <input class='form-control' id='id_first_name' placeholder='País' type='text'>      
+                </div>
+              </div>
+              <label class='control-label col-md-2' for='id_checkout'>Provincia</label>
+              <div class='col-md-3'>
+                <div class='form-group internal input-group'>
+                  <input class='form-control' id='id_first_name' placeholder='Provincia' type='text'> 
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- localidad -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Localidad</label>
+            <div class='col-md-8'>
+              
+              <div class='col-md-3'>
+                <div class='form-group internal input-group'>
+                    <input class='form-control' id='id_first_name' placeholder='Localidad' type='text'>      
+                </div>
+              </div>
+              <label class='control-label col-md-2' for='id_checkout'>CP</label>
+              <div class='col-md-3'>
+                <div class='form-group internal input-group'>
+                  <input class='form-control' id='id_first_name' placeholder='CP' type='text'> 
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- direccion -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Dirección</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control' id='id_email' placeholder='Dirección' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Telefono -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Teléfono</label>
+            <div class='col-md-8'>
+              
+              <div class='col-md-3'>
+                <div class='form-group internal input-group'>
+                    <input class='form-control' id='id_first_name' placeholder='Télefono' type='text'>      
+                </div>
+              </div>
+              <label class='control-label col-md-2' for='id_checkout'>Móvil</label>
+              <div class='col-md-3'>
+                <div class='form-group internal input-group'>
+                  <input class='form-control' id='id_first_name' placeholder='Móvil' type='text'> 
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- e-mail -->
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>E-mail</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control' id='id_email' placeholder='E-mail' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contraseña -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Constraseña</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control' id='id_email' placeholder='Contraseña' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contraseña -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Constraseña</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control' id='id_email' placeholder='Contraseña' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class='col-md-offset-4 col-md-3'>
+              <button class='btn-lg btn-primary' type='submit'>Enviar</button>
+            </div>
+            <div class='col-md-3'>
+              <button id='btnCancelProdu'class='btn-lg btn-danger' type='submit'>Cancel</button>
+            </div>
+          </div>
+          
+         </div> <!-- /id resgistro productor-->
+         <!-- Fin registro Productor -->
+
+
+          <!-- ////////////////////////////////////// -->
+          <!--Registro Consumidor  -->
+          <!-- ////////////////////////////////////// -->
+          <div id="registroConsumidor" style='display:none'>
+          <h2 class="tituloReg">Registro Consumidor</h2><br>
+
+            <div class="social-icons"   >
+               
+               <div class="col_1_of_f span_1_of_f"><a href="#">
+                  <ul class='facebook'>
+                    <i class="fb"> </i>
+                    <li>Connect with Facebook</li>
+                    <div class='clear'> </div>
+                  </ul>
+                  </a>
+               </div> 
+
+               <div class="col_1_of_f span_1_of_f"><a href="#">
+                  <ul class='twitter'>
+                    <i class="tw"> </i>
+                    <li>Connect with Twitter</li>
+                    <div class='clear'> </div>
+                  </ul>
+                  </a>
+               </div>
+
+                <div class="clear"> </div>  
+            </div><!-- /social-icons -->
+
+
+          <!-- Datos consumidor -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Nombre</label>
+            <div class='col-md-8'>
+              <div class='col-md-2'>
+                <div class='form-group internal'>
+                  <select class='form-control' id='id_title'>
+                    <option>Mr</option>
+                    <option>Ms</option>
+                    <option>Mrs</option>
+                    <option>Miss</option>
+                  </select>
+                </div>
+              </div>
+              <div class='col-md-3 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_first_name' placeholder='Nombre' type='text'>
+                </div>
+              </div>
+              <div class='col-md-3 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_last_name' placeholder='Apellido' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- localidad -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Móvil</label>
+            <div class='col-md-8'>
+              
+              <div class='col-md-3'>
+                <div class='form-group internal input-group'>
+                    <input class='form-control' id='id_first_name' placeholder='Móvil' type='text'>      
+                </div>
+              </div>
+              <label class='control-label col-md-2' for='id_checkout'>CP</label>
+              <div class='col-md-3'>
+                <div class='form-group internal input-group'>
+                  <input class='form-control' id='id_first_name' placeholder='CP' type='text'> 
+                </div>
+              </div>
+
+            </div>
+          </div>
+        
+          <!-- e-mail -->
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>E-mail</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control' id='id_email' placeholder='E-mail' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contraseña -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Constraseña</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control' id='id_email' placeholder='Contraseña' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contraseña -->
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Constraseña</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control' id='id_email' placeholder='Contraseña' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class='col-md-offset-4 col-md-3'>
+              <button class='btn-lg btn-primary' type='submit'>Enviar</button>
+            </div>
+            <div  class='col-md-3'>
+              <button id='btnCancelConsu' class='btn-lg btn-danger' type='submit'>Cancel</button>
+            </div>
+          </div>
+          
+         </div> <!-- /id resgistro productor-->
+         <!-- Fin registro Productor -->
+
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

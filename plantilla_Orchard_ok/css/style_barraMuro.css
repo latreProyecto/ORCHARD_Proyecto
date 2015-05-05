@@ -1,0 +1,74 @@
+
+
+ul.publicar{
+	list-style:none;
+	padding:0;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	background: #60CF69;
+	padding: 12px;
+}
+i.publi{
+	width:30px;
+	height:30px;
+	background:url(../imagesRS/tw.png);
+	float:left;
+	margin-right: 2em;
+}
+ul.publicar li{
+	color:#fff;
+	font-size:1em;
+	float: left;
+	margin-top: 5px;
+}
+ul.publicar:hover{
+	background: #9EFF5C;
+}
+
+ul.mensaje{
+	list-style:none;
+	padding:0;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	background:#60CF69;
+	padding: 12px;
+}
+i.mensa{
+	width:30px;
+	height:30px;
+	background:url(../imagesRS/sobre3.png);
+	background-repeat: no-repeat;
+	float:left;
+	margin-right: 2em;
+}
+ul.mensaje li{
+	color:#fff;
+	font-size:1em;
+	float: left;
+	margin-top: 5px;
+}
+ul.mensaje:hover{
+	/*background: #71B8ED;*/
+	background: #9EFF5C;
+}
+
+/**start-copy-right**/
+
+.col_1_of_f:first-child {
+	margin-left: 0;
+}
+.span_1_of_f {
+	width:50%;
+}
+.col_1_of_f {
+	display: block;
+	float: left;
+	margin:0 0 0 0;
+}
+
+
+
