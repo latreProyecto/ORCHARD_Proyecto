@@ -1,0 +1,10 @@
+verde: #60CF69
+
+verde hover: #71B8ED
+
+beig; #D0DF96
+
+azul claro: #71B8ED
+azul twiter: #55ACEE
+
+azul: #428bca
